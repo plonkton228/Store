@@ -1,4 +1,5 @@
 export enum RoutName {
     MAIN = 'main',
-    ABOUT = 'about'
+    ABOUT = 'about',
+    NOTFOUND = 'notfound'
 }

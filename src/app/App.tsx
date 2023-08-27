@@ -4,6 +4,7 @@ import useClassName from 'share/libs/ClassNames/useClassName'
 import { Routing } from './providers/Routs/index'
 import { NavBar } from 'widgets/NavBar'
 import { SideBar } from 'pages/SideBar/ui/SideBar'
+
 const App: React.FC = () => {
     const { theme } = useTheme()
     return (<>
