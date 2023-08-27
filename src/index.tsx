@@ -1,19 +1,19 @@
-import React from "react";
-import  ReactDOM  from "react-dom/client";
-import App from './app/App';
-import { BrowserRouter } from "react-router-dom";
-import "app/styles/reset.scss";
-import ThemeProvider from "app/providers/Themes/ThemeProvider";
+import { Suspense } from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './app/App'
+import { BrowserRouter } from 'react-router-dom'
+import 'app/styles/reset.scss'
+import { ThemeProvider } from 'app/providers/Themes/index'
+import 'share/libs/i18next/i18next'
 
-
-
-
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<>
-<ThemeProvider>
- <BrowserRouter>
-   <App/>
- </BrowserRouter>
-</ThemeProvider>
+    <ThemeProvider>
+        <BrowserRouter>
+            <Suspense fallback ="loading">
+                <App/>
+            </Suspense>
+        </BrowserRouter>
+    </ThemeProvider>
 </>)

@@ -1,12 +1,10 @@
-@import url('./variables/variables.scss');
-@import url('./theme/dark.scss');
-@import url('./theme/light.scss');
+@import './variables/variables';
+@import './theme/dark';
+@import './theme/light';
 
 
 .app{
     font: var(--font-m);
-
     background: var(--bg-color);
-
     min-height: 100vh;
 }

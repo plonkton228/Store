@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: end;
+    max-width: 1024px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.NavBar{
+    width: 100%;
+    background: var(--inverted-bg-color);
+}
+
+.Left {
+    margin-left: 10px;
+    
+}

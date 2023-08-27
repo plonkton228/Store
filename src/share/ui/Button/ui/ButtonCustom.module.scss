@@ -1,0 +1,30 @@
+
+
+.btn{
+    font-size : var(--font-size-button);
+    color: darkgrey;
+    background-color: transparent;
+}
+
+
+.reset{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.primary {
+    border: 1px solid var(--additional-color);
+    color : var(--additional-color);
+    font-size: 14px;
+}
+
+
+.SwitchLanguage {
+    border : 1px solid darkgrey
+
+}
