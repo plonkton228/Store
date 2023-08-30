@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+
+    padding: 40px;
+}
+
+.btn{
+    padding: 20px;
+    align-self: flex-end;
+}

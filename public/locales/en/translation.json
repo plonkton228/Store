@@ -3,5 +3,7 @@
     "Главная": "Main page",
     "Свернуть" : "Collapse",
     "En" : "Ru",
-    "Страница не найдена": "Page not Found"
+    "Страница не найдена": "Page not Found",
+    "Перезагрузить страницу": "Reload Page",
+    "Похоже что-то пошло не так!": "Opss something went wrong"
 }

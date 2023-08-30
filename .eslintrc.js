@@ -27,5 +27,7 @@ module.exports = {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/no-floating-promises" : "off",
+        "@typescript-eslint/explicit-function-return-type": "warn",
+        "n/handle-callback-err": "off"
     }
 }
