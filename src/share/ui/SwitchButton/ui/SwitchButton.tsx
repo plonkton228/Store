@@ -13,7 +13,7 @@ interface SwithcButtonProps {
 export const SwitchButton: React.FC<SwithcButtonProps> = ({ children }: SwithcButtonProps) => {
     const { theme, toggleTheme } = useTheme()
     return (<>
-        <ButtonCustom onClick={() => { toggleTheme(theme) }} theme= {ButtonTheme.RESET} classNames= {cls.left}>
+        <ButtonCustom data-testid= 'ButtonSwitch' onClick={() => { toggleTheme(theme) }} theme= {ButtonTheme.RESET} classNames= {cls.left}>
             {theme === Theme.DARK ? <img className= {cls.img} src= {Moon}/> : <img className= {cls.img} src= {Sun}/>}
             {children}
         </ButtonCustom>

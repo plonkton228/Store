@@ -3,6 +3,7 @@ import { DefinePlugin } from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { type Paths } from './types/webpackTypes'
+import BundleAnalyzerPlugin from 'webpack-bundle-analyzer'
 
 function pluginsConfig (path: Paths, isDev: boolean): webpack.WebpackPluginInstance[] {
     return [
@@ -15,6 +16,9 @@ function pluginsConfig (path: Paths, isDev: boolean): webpack.WebpackPluginInsta
         }),
         new DefinePlugin({
             ISDEV: JSON.stringify(isDev)
+        }),
+        new BundleAnalyzerPlugin.BundleAnalyzerPlugin({
+            openAnalyzer: false
         })
     ]
 }

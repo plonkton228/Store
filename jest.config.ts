@@ -3,7 +3,7 @@ import type { Config } from 'jest'
 const config: Config = {
     clearMocks: true,
     testEnvironment: 'jsdom',
-    rootDir: '/Web/Solopharma',
+    rootDir: '',
     roots: ['<rootDir>'],
     moduleDirectories: ['node_modules'],
     modulePaths: ['<rootDir>src'],
@@ -20,7 +20,14 @@ const config: Config = {
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
-    moduleNameMapper: { '\\.(css|scss)$': 'src/share/ui/Button/ui/ButtonCustom.tsx' }
+    setupFilesAfterEnv: [
+        '<rootDir>/config/jest/setupTest.ts'
+    ],
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+
+        '\\.(svg|png)': '<rootDir>/config/jest/mockSvg.ts'
+    }
 }
 
 export default config
