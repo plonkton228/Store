@@ -1,12 +1,11 @@
 import type { Config } from 'jest'
-
 const config: Config = {
     clearMocks: true,
     testEnvironment: 'jsdom',
     rootDir: '',
-    roots: ['<rootDir>'],
-    moduleDirectories: ['node_modules'],
-    modulePaths: ['<rootDir>src'],
+    roots: ['<rootDir>src'],
+    moduleDirectories: ['node_modules', '<rootDir>src'],
+    modulePaths: ['<rootDir>'],
     coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
     moduleFileExtensions: [
         'js',
@@ -21,13 +20,15 @@ const config: Config = {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
     setupFilesAfterEnv: [
-        '<rootDir>/config/jest/setupTest.ts'
+        '<rootDir>/config/jest/setup/setupTest.ts'
     ],
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',
 
-        '\\.(svg|png)': '<rootDir>/config/jest/mockSvg.ts'
+        '\\.(svg|png)': '<rootDir>/config/jest/setup/mockSvg.ts'
+
     }
+
 }
 
 export default config
