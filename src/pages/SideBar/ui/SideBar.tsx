@@ -17,9 +17,9 @@ export const SideBar: React.FC<SideBarProps> = ({ children }: SideBarProps) => {
         setCollapsed(prev => !prev)
     }
     return (<>
-        <div className= {useClassName({ cls: cls.Sidebar, mode: {}, classes: [] })}>
-            <div className = {useClassName({ cls: cls.left, mode: { [cls.collapsed]: collapsed }, classes: [] })}>
-                <ButtonCustom theme= {ButtonTheme.PRIMARY} onClick={() => { toggle() }}>{t('Свернуть')}</ButtonCustom>
+        <div data-testid = 'SidebarId' className= {useClassName({ cls: cls.Sidebar, mode: {}, classes: [] })}>
+            <div data-testid = 'SideBarContainer' className = {useClassName({ cls: cls.left, mode: { [cls.collapsed]: collapsed }, classes: [] })}>
+                <ButtonCustom data-testid = 'btn' theme= {ButtonTheme.PRIMARY} onClick={ toggle }>{t('Свернуть')}</ButtonCustom>
             </div>
             <div className = {useClassName({ cls: cls.right, mode: {}, classes: [] })}>
                 {children}

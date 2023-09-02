@@ -7,6 +7,7 @@ module.exports = {
         "standard-with-typescript",
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
+        "plugin:storybook/recommended"
     ],
 
     "parserOptions": {
@@ -29,5 +30,12 @@ module.exports = {
         "@typescript-eslint/no-floating-promises" : "off",
         "@typescript-eslint/explicit-function-return-type": "warn",
         "n/handle-callback-err": "off"
-    }
+    },
+
+    "overrides": [{
+        "files" :  ["**/src/**/*.test.{ts,tsx}"],
+        "rules" : {
+            "i18next/no-literal-string":  "off",
+        }
+    }]
 }
